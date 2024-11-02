@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Personal Finance</string>
+
+    <!-- custom strings -->
+    <string name="groups_name">Grupos</string>
+    <string name="balances_name">Saldos</string>
+    <string name="agends_name">Agenda</string>
+    <string name="movements_name">Movimento</string>
+
+</resources>
