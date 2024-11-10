@@ -36,7 +36,6 @@ class GroupEditFragment : Fragment() {
 
         val backButton = view.findViewById<Button>(R.id.button_back)
         backButton.setOnClickListener {
-            //parentFragmentManager.popBackStack()
             findNavController().navigateUp()
         }
 

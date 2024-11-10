@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
                 supportFragmentManager.executePendingTransactions()
             }
 
-        navController = navHostFragment.navController
+        navController = navHostFragment?.navController ?: throw IllegalStateException("NavController não foi inicializado corretamente.")
 
         val backgroundGradient = GradientDrawable(
             GradientDrawable.Orientation.TL_BR,
@@ -79,9 +79,9 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
         }
     }
 
-    override fun onSupportNavigateUp(): Boolean {
-        return navController.navigateUp() || super.onSupportNavigateUp()
-    }
+    //override fun onSupportNavigateUp(): Boolean {
+    //    return navController.navigateUp() || super.onSupportNavigateUp()
+    //}
 
     private fun setupBottomNavigation() {
         icons[IDX_GROUPS].setOnClickListener {
