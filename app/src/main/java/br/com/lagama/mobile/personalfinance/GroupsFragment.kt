@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import androidx.navigation.fragment.findNavController
 
 class GroupsFragment : Fragment() {
 
@@ -31,12 +32,11 @@ class GroupsFragment : Fragment() {
         }
     }
 
-    private fun loadSubFragment(strAction: String) {
-        val fragment = GroupEditFragment.newInstance(strAction)
-        parentFragmentManager.beginTransaction()
-            .replace(R.id.main_fragment_container, fragment)
-            .addToBackStack(null)
-            .commit()
+    private fun loadSubFragment(action: String) {
+        val actionBundle = Bundle().apply {
+            putString("actionName", action)
+        }
+        findNavController().navigate(R.id.groupEditFragment, actionBundle)
     }
 
 }

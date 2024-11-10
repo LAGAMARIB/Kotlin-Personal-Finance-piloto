@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
+import androidx.navigation.fragment.findNavController
 
 private const val ARG_PARAM1 = "actionName"
 
@@ -35,7 +36,8 @@ class GroupEditFragment : Fragment() {
 
         val backButton = view.findViewById<Button>(R.id.button_back)
         backButton.setOnClickListener {
-            parentFragmentManager.popBackStack()
+            //parentFragmentManager.popBackStack()
+            findNavController().navigateUp()
         }
 
     }

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/agendaFragment">
+
+    <fragment
+        android:id="@+id/groupsFragment"
+        android:name="br.com.lagama.mobile.personalfinance.GroupsFragment"
+        android:label="@string/groups_name"/>
+
+    <fragment
+        android:id="@+id/groupEditFragment"
+        android:name="br.com.lagama.mobile.personalfinance.GroupEditFragment"
+        android:label="@string/group_edit_name">
+    </fragment>
+
+    <fragment
+        android:id="@+id/balancesFragment"
+        android:name="br.com.lagama.mobile.personalfinance.BalancesFragment"
+        android:label="@string/balances_name"/>
+
+    <fragment
+        android:id="@+id/agendaFragment"
+        android:name="br.com.lagama.mobile.personalfinance.AgendaFragment"
+        android:label="@string/agends_name"/>
+
+    <fragment
+        android:id="@+id/movementsFragment"
+        android:name="br.com.lagama.mobile.personalfinance.MovementFragment"
+        android:label="@string/movements_name"/>
+
+</navigation>
